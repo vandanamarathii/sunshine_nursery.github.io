@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenBloom Nursery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+.header-main{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(20px);
+    box-shadow:0 2px 20px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+/* TOP BAR */
+.header-top{
+    background:linear-gradient(135deg,#059669,#10b981);
+    color:#fff;
+    padding:.5rem 0;
+    font-size:.85rem;
+}
+.header-top .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* HEADER BOTTOM */
+.header-bottom{
+    padding:1rem 0;
+}
+.header-layout{
+    display:flex;
+    align-items:center;
+}
+
+/* LEFT */
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    font-size:1.8rem;
+    font-weight:700;
+    background:linear-gradient(45deg,#059669,#10b981);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.logo i{
+    font-size:2.2rem;
+    margin-right:.5rem;
+}
+
+/* NAV MENU */
+.nav-menu{
+    list-style:none;
+    display:flex;
+    gap:1.8rem;
+}
+.nav-menu a{
+    text-decoration:none;
+    color:#1e293b;
+    font-weight:500;
+}
+.nav-menu a:hover{color:#10b981}
+
+/* CENTER SEARCH */
+.search-container{
+    flex:1;
+    max-width:500px;
+    margin-left: 320px;
+    margin-right: 350px;
+    
+    position:relative;
+}
+.search-box{
+    width:100%;
+    padding:12px 20px 12px 50px;
+    
+    border-radius:50px;
+    border:2px solid #e2e8f0;
+    font-size: 17px;
+
+}
+.search-icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#64748b;
+}
+
+/* RIGHT ICONS */
+.header-actions{
+    display:flex;
+    gap:1.5rem;
+}
+.header-icon{
+    position:relative;
+    font-size:1.4rem;
+    cursor:pointer;
+    padding:10px;
+    border-radius:50%;
+}
+.header-icon:hover{
+    color:#10b981;
+    background:rgba(16,185,129,.1);
+}
+
+/* CART COUNT */
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-8px;
+    background:#ef4444;
+    color:#fff;
+    font-size:.7rem;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:150px;
+}
+.hero-content{
+    background:rgba(255,255,255,.9);
+    padding:3rem;
+    border-radius:30px;
+}
+.hero h1{
+    font-size:4rem;
+    background:linear-gradient(45deg,#059669,#10b981);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.hero p{color:#475569;margin:1rem 0 2rem}
+
+/* BUTTON */
+.btn-explore{
+    background:linear-gradient(45deg,#10b981,#34d399);
+    color:#fff;
+    padding:14px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .nav-menu{display:none}
+    .search-container{max-width:300px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header-main">
+    <div class="header-top">
+        <div class="container">
+            <span>📍 Bengaluru Nursery | Free Delivery Over ₹999</span>
+            <span>🌱+91 8073870812</span>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="container header-layout">
+
+            <!-- LEFT -->
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-seedling"></i> GreenBloom
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Plants</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- CENTER -->
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input class="search-box" placeholder="Search plants, pots, fertilizers">
+            </div>
+
+            <!-- RIGHT -->
+            <div class="header-actions">
+                <div class="header-icon">
+                    <i class="far fa-heart"></i>
+                    <span class="cart-count">2</span>
+                </div>
+                <div class="header-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Premium Nursery Plants</h1>
+        <p>Bengaluru's best indoor & outdoor plants</p>
+        <a href="#" class="btn-explore">Explore Plants</a>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+
+

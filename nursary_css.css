@@ -1,0 +1,16 @@
+.plant-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+.plant-img {
+    height: 200px;
+    object-fit: cover;
+}
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
